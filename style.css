@@ -1,0 +1,50 @@
+/* a container to hold the elements for larger displays */
+.container {
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 350px 50px;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "m m m m c c c c c c c c"
+        "f f f f f f f f f f f f";
+    text-align: center;
+    
+}
+/* a container to hold the elements for mobile display, the menu is moved to the top*/
+@media screen and (max-width: 640px) {
+    .container {
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 350px 50px;
+    grid-template-areas:
+        "m m m m m m h h h h h h"
+        "c c c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+    text-align: center;
+    
+}
+}
+
+header {
+    grid-area: h;
+    background: #b9f29d;
+    
+}
+aside {
+    grid-area: m;
+    background: #e2b434;
+    
+        
+
+}
+main {
+    grid-area: c;
+    background: #a7f1e4;
+}
+footer {
+   grid-area: f;
+   background: #f2a7d6;
+    
+}
